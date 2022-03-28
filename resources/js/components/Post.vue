@@ -7,8 +7,8 @@
                 <p>{{post.content}}</p>
                 <img v-if="post.img" :src="`/storage/${post.img} `">
 
-                <!--<p v-if="post.category">#category : {{post.category.name}}</p>
-                <p v-if="post.tags">{{post.tags.name}}</p>-->
+                <p v-if="post.category">#category : {{post.category.name}}</p>
+                <p v-if="post.tags">{{post.tags.name}}</p>
               </div>
           </li>
       </ul>
@@ -34,7 +34,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.carta{
+  width: 350px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap:wrap;
+
+  margin: 10px;
+
+  border: 2px solid black;
+}
     img{
-      width: 200px;
+      width: 100%;
     }
 </style>

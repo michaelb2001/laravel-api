@@ -2113,7 +2113,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "img[data-v-5e8280ea] {\n  width: 200px;\n}", ""]);
+exports.push([module.i, "ul[data-v-5e8280ea] {\n  display: flex;\n  flex-wrap: wrap;\n  list-style-type: none;\n}\n.carta[data-v-5e8280ea] {\n  width: 350px;\n  min-height: 400px;\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n  flex-wrap: wrap;\n  margin: 10px;\n  border: 2px solid black;\n}\nimg[data-v-5e8280ea] {\n  width: 100%;\n}", ""]);
 
 // exports
 
@@ -3415,6 +3415,12 @@ var render = function () {
             post.img
               ? _c("img", { attrs: { src: "/storage/" + post.img + " " } })
               : _vm._e(),
+            _vm._v(" "),
+            post.category
+              ? _c("p", [_vm._v("#category : " + _vm._s(post.category.name))])
+              : _vm._e(),
+            _vm._v(" "),
+            post.tags ? _c("p", [_vm._v(_vm._s(post.tags.name))]) : _vm._e(),
           ]),
         ])
       }),
